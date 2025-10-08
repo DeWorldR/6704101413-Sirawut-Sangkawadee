@@ -11,6 +11,7 @@ export default defineConfig((ctx) => ({
   ],
 
   build: {
+    vueRouterMode: 'history',
     publicPath: '/6704101413-Sirawut-Sangkawadee/', // ✅ สำคัญสุด
   },
 
