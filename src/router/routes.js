@@ -1,12 +1,18 @@
-import { route } from 'quasar/wrappers'
-import { createRouter, createWebHashHistory } from 'vue-router'
-import routes from './routes'
+const routes = [
+  {
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/IndexPage.vue') }
+    ]
+  },
 
-export default route(function () {
-  const Router = createRouter({
-    history: createWebHashHistory(process.env.BASE_URL),
-    routes
-  })
+  // Always leave this as last one,
+  // but you can also remove it
+  {
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/ErrorNotFound.vue')
+  }
+]
 
-  return Router
-})
+export default routes
