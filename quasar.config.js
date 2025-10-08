@@ -11,7 +11,7 @@ export default defineConfig((ctx) => ({
   ],
 
   build: {
-    publicPath: 'DeWorldR/6704101413-Sirawut-Sangkawadee/', // ✅ สำคัญสุด
+    publicPath: '/6704101413-Sirawut-Sangkawadee/', // ✅ สำคัญสุด
   },
 
   devServer: {
